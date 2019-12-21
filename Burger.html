@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Freshland Burgers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing:border-box;
+}
+
+.left {
+  background-color:#2196F3;
+  padding:20px;
+  float:left;
+  width:20%; 
+}
+
+.main {
+  background-color:#f1f1f1;
+  padding:20px;
+  float:left;
+  width:60%; 
+}
+
+.right {
+  background-color:#4CAF50;
+  padding:20px;
+  float:left;
+  width:20%; 
+}
+
+
+@media screen and (max-width:800px) {
+  .left, .main, .right {
+    width:100%; 
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Bienvenidos a Freshland</h1>
+
+<div class="left">
+        <h1>Precios</h1>
+     <form id="menu">
+		
+	
+		Sencilla:<br>
+		<input type="number" id="Sencilla" value="" min="0" max="5">
+		<br><br>
+	
+		Doble:<br>
+		<input type="number" id="Doble" value="" min="0" max="5">
+		<br><br>
+		
+		<button onclick="menu()">Ordenar</button>
+		
+		
+		</form>
+	
+	<p>Su orden es de </p> <p id="ordena"></p>
+
+
+</div> 
+<div class="main">
+<h1>Pida su Freshburger</h1>
+<ul style="list-style-type:none;">
+<li><img src="topbun.jpg" alt="topbun"style="width:20%"></li>
+<li><img src="lettuce.jpg" alt="lettuce"style="width:20%"></li>
+<li><img src="onion.jpg" alt="onion"style="width:20%"></li>
+<li><img src="tomato.jpg" alt="tomato"style="width:20%"></li>
+<li><img src="cheesee.jpg" alt="cheesee"style="width:20%"></li>
+<li><img src="patty.jpg" alt="patty"style="width:20%"></li>
+<li><img src="botombun.jpg" alt="botombun"style="width:20%"></li>
+</ul>
+</div>
+<div class="right">
+        <h1>Salsas</h1>
+		<ul style="list-style-type:none;">
+        <li><img src="ketchup.jpg" alt="ketchup"style="width:30%"></li>
+        <li><img src="mayo.jpg" alt="mayo"style="width:30%"></li>
+        <li><img src="mustard.jpg" alt="mustard"style="width:30%"></li>
+		</ul>
+      </div>
+<script>
+function menu(){
+var x = document.getElementById("Sencilla").value;
+var y = document.getElementById("Doble").value;
+var z = document.getElementById("ordena").innerHTML =  x + "" + y ;
+}
+
+
+
+</script>
+</body>
+</html>
